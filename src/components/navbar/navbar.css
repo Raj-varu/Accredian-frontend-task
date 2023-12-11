@@ -1,0 +1,13 @@
+.navbar-container {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: rgba(214, 214, 215, 0.05) 0px 10px;
+  height: 7vh;
+}
+
+.name {
+  margin-top: auto;
+  padding: 5px;
+  margin-left: 20px;
+}

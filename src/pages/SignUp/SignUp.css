@@ -1,0 +1,103 @@
+.signup-signup-container {
+  /* background-color: aqua; */
+  height: 100vh;
+  width: 100vw;
+}
+.tempdummynavstyle {
+  text-decoration: none;
+  color: black;
+}
+.image-section {
+  height: 80vh;
+  width: 60vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.image-section img {
+  object-fit: contain;
+  height: 90%;
+  width: 90%;
+}
+.signup-form-section {
+  height: 80vh;
+  /* background-color: rgb(255, 145, 0); */
+  width: 40vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signup-form {
+  padding: 20px;
+  background-color: white;
+  height: 110%;
+  width: 80%;
+  margin-top: 50px;
+  border-radius: 20px;
+  padding-bottom: 430px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.button {
+  width: 100%;
+}
+/* height less then 700 OR width less then 995px */
+@media screen and (max-width: 995px), screen and (max-height: 700px) {
+  .signup-form {
+    height: 110%;
+  }
+  .image-section {
+    height: 60vh;
+    width: 60vw;
+  }
+  .signup-form-section {
+    width: 90vw;
+    height: 43rem;
+  }
+}
+
+@media (max-width: 790px) {
+  .signup-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .image-section {
+    display: none;
+  }
+  .signup-form-section {
+    width: 90vw;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .image-section {
+    display: none;
+  }
+  .signup-form-section {
+    width: 100vw;
+  }
+  .signup-form {
+    margin-top: 7rem;
+    margin-left: 30px;
+    height: 650px;
+    width: 90%;
+  }
+}
+/* very small screen */
+@media screen and (max-width: 320px), screen and (max-height: 500px) {
+  label {
+    font-size: 16px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  input {
+    height: 30px;
+  }
+  .signup-form {
+    width: 90%;
+    margin-top: 1rem;
+  }
+}
