@@ -15,6 +15,8 @@ const SignUp = () => {
   const [confPasswordErrMsg, setConfPasswordErrMsg] = useState("");
   const [answerErr, setAnswerErr] = useState(false);
   const [answerErrMsg, setAnswerErrMsg] = useState("");
+  const [nameErr, setNameErr] = useState(false);
+  const [nameErrMsg, setNameErrMsg] = useState("");
 
   //setting up navigate
   const navigate = useNavigate();
@@ -27,6 +29,7 @@ const SignUp = () => {
     const password = data.get("password");
     const confirmPassword = data.get("Confirm Password");
     const answer = data.get("answer");
+
     //Email validation
     if (validEmail.test(email)) {
       setEmailErr(false);
@@ -69,6 +72,14 @@ const SignUp = () => {
       setPasswordErr(true);
       setConfPasswordErrMsg("Password does't match");
       setPasswordErrMsg("Password does't match");
+    }
+    if (!(name === "")) {
+      setNameErr(false);
+      setNameErrMsg("");
+      // console.log("email Pass");
+    } else {
+      setNameErr(true);
+      setNameErrMsg("Invalid name");
     }
     // console.log(answer);
     if (answer) {
@@ -169,6 +180,8 @@ const SignUp = () => {
               sx={{ mt: 1 }}
             >
               <TextField
+                error={nameErr}
+                helperText={nameErrMsg}
                 margin="normal"
                 required
                 fullWidth
